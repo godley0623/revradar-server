@@ -6,6 +6,7 @@ const router = express.Router();
 
 // Sale post routes
 //router.post('/saleposts', upload.array('images', 5), salePostController.createSalePost);
+router.post('/saleposts', salePostController.createSalePost);
 router.get('/saleposts/:id', salePostController.getSalePostById);
 router.get('/saleposts', salePostController.getAllSalePosts);
 router.put('/saleposts/:id', salePostController.updateSalePost);

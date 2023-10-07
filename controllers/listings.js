@@ -4,8 +4,7 @@ import { deleteImageFromCloudinary } from '../config/cloudinaryConfig.js';
 async function createSalePost(req, res) {
     try {
       const postData = req.body;
-      const images = req.files.map(file => 'uploads/compressed/' + file.filename);
-      const carListing = new CarListing({ ...postData, images });
+      const carListing = new CarListing({ ...postData });
       await carListing.save();
       res.status(201).json(carListing);
     } catch (error) {

@@ -86,7 +86,6 @@ app.use('/auth', authRoutes);
 app.use('/api', salePostRoutes);
 app.use('/api', carInfoRoutes);
 app.use('/api/upload', uploadRoutes);
-// app.use('/auth', authRoutes);
 
 db.on("connected", () => {
   console.log(chalk.blue("Connectd to MongoDB!"));
